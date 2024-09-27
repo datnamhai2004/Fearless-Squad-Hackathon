@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Correct the path to your CSS file -->
-    <link rel="stylesheet" href="/frontend/style.css">
+    <link rel="stylesheet" href="/frontend/test-pen.css">
     
     <!-- Correct the path to the favicon -->
     <link rel="icon" href="/frontend/images/Screenshot%202024-07-27%20095649.png" type="image/x-icon">
@@ -14,14 +14,13 @@
     
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-    
-    <title>Smart Pen</title>
-    
-</head>
+      
+    <title>Test pen</title>
 
-<header>
+</head>
+<body>
     <nav class="navbar bg-body-black fixed-top">
-        <div class="container-fluid" style="background-color: white;"                                                                                                                                     >
+        <div class="container-fluid" style="background-color: white;">
           <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
             <div class="offcanvas-header">
               <h5 class="offcanvas-title" id="offcanvasNavbarLabel">MENU</h5>
@@ -30,14 +29,14 @@
             <div class="offcanvas-body">
               <ul class="navbar-nav justify-content-end flex-grow-1 pe-3 menu">
                 <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="/frontend/index.html">Home</a>
+                  <a class="nav-link " aria-current="page" href="/frontend/index.html">Home</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="/frontend/chats.html">Chat history</a>
-                </li>                                                                               
+                  <a class="nav-link" href="chats.html">Chat history</a>
+                </li>    
                 <li class="nav-item">
-                  <a class="nav-link" href="/input">Input numbers</a> <!-- Thay đổi href để trỏ đến endpoint của FastAPI -->
-              </li>
+                    <a class="nav-link active" href="/frontend/test-pen.html">Test BITPen</a>
+                </li>                                                                            
               </ul>
             </div>
           </div>
@@ -46,16 +45,21 @@
           </button>
         </div>
       </nav>
-      
-</header>
-<body>
-    <div class="output" id="output">
-        <p>Prediction: {{ prediction['prediction'] }}</p>
+
+    <div class="test-container mt-5 pt-4">
+        <div class="test row">
+            <div class="col-8 left-screen">
+                <h1 id="current-value" style="font-size: 500px;"></h1>
+            </div>
+            <div class="col-4 right-screen">
+                <label id="prediction-label"> PREDICTION IS: <span id="prediction-value" style="margin-left: 20px;"></span></label>
+                <ul id="history-values" class="mt-2">
+                    <!-- save history of values before -->
+                </ul>
+            </div>
+        </div>
     </div>
 
-    <!-- Nếu cần dùng thêm JavaScript thì dùng, hoặc không cần nếu render từ backend đủ -->
-   
-    
+   <script src="test-pen.js"></script>
 </body>
- <script src="/static/input.js"></script> 
 </html>

@@ -49,31 +49,25 @@ def save_chat_history(user_input: str, response: str):
 
 
 
-# def generate_voice_response(response: str):
-#     tts = gTTS(response, lang='en')
-#     filename = f"{datetime.datetime.now().strftime('%Y%m%d%H%M%S')}.mp3"
-#     audio_path = os.path.join(AUDIO_FOLDER, filename)
-#     tts.save(audio_path)
-#     return filename
-
-
 @app.get("/", response_class=HTMLResponse)
 async def index(request: Request):
     return templates.TemplateResponse("index.html", {"request": request})
+@app.get("/test-pen", response_class=HTMLResponse)
+async def index(request: Request):
+    return templates.TemplateResponse("test-pen.html", {"request": request})
+
+# def predictDigitCharacter():
+#     return {"prediction": "1"}
 
 
-def predictDigitCharacter():
-    return {"prediction": "1"}
+# # Endpoint trả về trang HTML và render kết quả vào trang
+# @app.get("/input", response_class=HTMLResponse)
+# async def get_input_page(request: Request):
+#     prediction = predictDigitCharacter()  # Gọi hàm dự đoán và lấy kết quả
+#     # Render trang HTML và truyền kết quả vào template
+#     return templates.TemplateResponse("input.html", {"request": request, "prediction": prediction})
 
 
-# Endpoint trả về trang HTML và render kết quả vào trang
-@app.get("/input", response_class=HTMLResponse)
-async def get_input_page(request: Request):
-    prediction = predictDigitCharacter()  # Gọi hàm dự đoán và lấy kết quả
-    # Render trang HTML và truyền kết quả vào template
-    return templates.TemplateResponse("input.html", {"request": request, "prediction": prediction})
-
- 
 
 @app.post("/chats", response_class=JSONResponse)
 async def chat(user_input: str = Form(...)):
@@ -101,7 +95,6 @@ def load_chat_history():
                 else:
                     formatted_lines.append(f"<div class='chat-message bot'>{line.strip()}</div>")
 
-          
             return formatted_lines
     return []
 
