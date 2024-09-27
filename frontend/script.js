@@ -18,7 +18,11 @@ let mediaRecorder;
 let audioChunks = [];
 let isRecording = false;
 
-
+// Example JavaScript fetch request
+fetch('/chats', {
+    method: 'POST',
+    body: new FormData(formElement), // Assuming 'formElement' contains the user input
+});
 function toggleRecording() {
     if (isRecording) {
         stopRecording();

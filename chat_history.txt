@@ -40,3 +40,18 @@
 25-09-2024 09:06:16 - User: xin ca
 25-09-2024 09:06:50 - User: xin ca
 25-09-2024 09:07:19 - User: xin
+27-09-2024 10:02:27 - User: xin chào
+27-09-2024 10:02:27 - Bot: Xin chào! Bạn cần tôi giúp gì nào?
+
+27-09-2024 10:03:40 - User: zz
+27-09-2024 10:03:40 - Bot: Rất tiếc, nhận yêu cầu của bạn chưa rõ ràng. Bạn đang muốn thảo luận về chủ đề nào? Vui lòng cung cấp thêm chi tiết để tôi có thể hỗ trợ bạn tốt hơn.
+
+27-09-2024 10:04:13 - User: xin chào
+27-09-2024 10:04:13 - Bot: Xin chào! Tôi là AI từ OpenAI. Tôi có thể giúp bạn trả lời câu hỏi, tìm thông tin, học hỏi và nhiều hơn thế. Bạn muốn tôi giúp gì cho bạn?
+
+27-09-2024 10:04:17 - User: xin chào
+27-09-2024 10:04:17 - Bot: Xin chào! Tôi là AI, tác vụ của tôi là hỗ trợ bạn giải quyết các vấn đề và câu hỏi.
+
+27-09-2024 10:05:23 - User: xin chào
+27-09-2024 10:05:23 - Bot: Xin chào! Tôi có thể giúp gì cho bạn?
+
